@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IP List</title>
+</head>
+<body>
+  <h1>最新 IP 列表</h1>
+  <pre id="ip-list"></pre>
+  <script>
+    // 加载 ip.txt 内容并显示
+    fetch('ip.txt')
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById('ip-list').textContent = text;
+      });
+  </script>
+</body>
+</html>
